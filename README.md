@@ -1,6 +1,19 @@
 # 3x-ui forward host
 
 
+
+## .htaccess
+
+```
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^sub66/([a-zA-Z0-9]+)$ sub/index.php?$1 [L,QSA]
+RewriteRule ^sub/([a-zA-Z0-9]+)$ sub/index.php?$1 [L,QSA]
+```
+
+
 ## index.php file
 
 ```
@@ -44,16 +57,4 @@ if ($httpCode == 200) {
 exit();
 ?>
 
-```
-
-
-## .htaccess
-
-```
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^sub66/([a-zA-Z0-9]+)$ sub/index.php?$1 [L,QSA]
-RewriteRule ^sub/([a-zA-Z0-9]+)$ sub/index.php?$1 [L,QSA]
 ```
