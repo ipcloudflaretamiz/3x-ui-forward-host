@@ -9,7 +9,7 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^sub66/([a-zA-Z0-9]+)$ sub/index.php?$1 [L,QSA]
+RewriteRule ^sub/([a-zA-Z0-9]+)$ sub/index.php?$1 [L,QSA]
 RewriteRule ^sub/([a-zA-Z0-9]+)$ sub/index.php?$1 [L,QSA]
 ```
 
